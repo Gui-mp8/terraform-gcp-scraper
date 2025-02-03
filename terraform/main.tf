@@ -37,11 +37,11 @@ resource "random_id" "bucket_id" {
 }
 
 # Create the buckets
-# module "cloudstorage" {
-#   source = "./cloud_storage"
-#   bucket_name = var.bucket_name_suzano
-#   location = var.bucket_location
-# }
+module "cloudstorage" {
+  source = "./cloud_storage"
+  bucket_name = var.bucket_name_suzano
+  location = var.bucket_location
+}
 
 module "iam" {
   source = "./iam"
