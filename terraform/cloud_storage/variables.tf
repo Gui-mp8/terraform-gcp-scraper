@@ -1,4 +1,4 @@
-variable "location" { 
+variable "location" {
   type = string
 }
 variable "bucket_name" {
