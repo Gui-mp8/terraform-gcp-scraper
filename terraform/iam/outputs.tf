@@ -17,7 +17,6 @@ output "cloudbuild_roles" {
   }
 }
 
-# Output for Airflow Service Account Roles
 output "airflow_roles" {
   description = "IAM roles for Airflow Service Account"
   value = {

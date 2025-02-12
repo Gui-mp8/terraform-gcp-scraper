@@ -26,13 +26,3 @@ variable "project_id" {
   description = "The GCP project ID"
   type        = string
 }
-
-# variable "cloudbuild_service_account_email" {
-#   description = "Email of the Cloud Build service account"
-#   type        = string
-# }
-
-# variable "airflow_sa_email" {
-#   description = "Email of the Airflow service account"
-#   type        = string
-# }

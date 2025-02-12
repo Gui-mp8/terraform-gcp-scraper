@@ -36,18 +36,18 @@ resource "random_id" "bucket_id" {
   byte_length = 4
 }
 
+module "iam" {
+  source = "./iam"
+
+  project_id = var.project_id
+}
+
 # Create the buckets
 # module "cloudstorage" {
 #   source = "./cloud_storage"
 #   bucket_name = var.bucket_name_suzano
 #   location = var.bucket_location
 # }
-
-module "iam" {
-  source = "./iam"
-
-  project_id = var.project_id
-}
 
 # module "artifact_registry" {
 #   source = "./artifact_registry"
@@ -62,7 +62,7 @@ module "iam" {
 #   github_repo = var.github_repo
 #   project_id = var.project_id
 #   region = var.region
-#   service_account = google_service_account.cloudbuild_service_account.id
+#   service_account = module.iam.cloudbuild_sa.email
 #   artifact_registry_repository = var.artifact_registry_repository
 #   depends_on = [
 #     module.iam,
