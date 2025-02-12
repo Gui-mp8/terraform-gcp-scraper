@@ -39,6 +39,6 @@ variable "app_name" {
 }
 
 variable "github_full_repo" {
-  default = "https://github.com/Gui-mp8/economic_data_extraction"
+  default = "https://github.com/Gui-mp8/terraform-gcp-scraper"
   type = string
 }
